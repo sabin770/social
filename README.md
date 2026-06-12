@@ -2,7 +2,7 @@
 
 # 🌊 Pulse
 
-### A full-featured Instagram-style social platform built on the MERN stack
+### Social platform built on the MERN stack
 
 **MongoDB · Express · React (Vite) · Node.js**
 
