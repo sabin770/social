@@ -1,4 +1,6 @@
 const http = require('http');
+const connectDB = require("./config/mongo.config");
+
 
 
 const httpServer = http.createServer((req, res) => {
@@ -6,7 +8,7 @@ const httpServer = http.createServer((req, res) => {
     res.end('Hello World!');
 })
 
-const PORT = 9005
+const PORT = 9006
 const HOST = 'localhost'    
 
 httpServer.listen(PORT, HOST, (err) => {
