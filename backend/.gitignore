@@ -1,4 +1,9 @@
 node_modules
 .env
-uploads/*
-!uploads/.gitkeep
+public/uploads/*
+!public/uploads/profiles
+!public/uploads/posts
+public/uploads/profiles/*
+public/uploads/posts/*
+!public/uploads/profiles/.gitkeep
+!public/uploads/posts/.gitkeep

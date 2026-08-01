@@ -2,7 +2,15 @@ const jwt = require("jsonwebtoken");
 const { AppConfig } = require("../config/config");
 const userSvc = require("../modules/users/user.service");
 
-
+/**
+ * auth middleware - verifies JWT from either:
+ *  - httpOnly cookie "token"
+ *  - Authorization: Bearer <token> header
+ *
+ * if `required` is false, the middleware will NOT throw when no token is
+ * present, but will still attach `req.loggedInUser` if a valid token exists.
+ * This is useful for routes that behave differently for logged in vs guest users.
+ */
 const auth = (required = true) => {
   return async (req, res, next) => {
     try {
